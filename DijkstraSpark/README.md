@@ -69,6 +69,7 @@ az network nsg rule create \
 ```
 
 ### 4. Set Up Spark on the VM
+ssh azureuser@172.191.236.199
 SSH into the VM and run the following commands:
 
 ```bash
@@ -102,10 +103,9 @@ echo "export SPARK_MASTER_HOST=0.0.0.0" >> spark-env.sh
 ## Building and Running the Project
 
 ### 1. Upload Graph Data
-```bash
+
 # From your local machine
-scp weighted_graph.txt azureuser@<VM_IP>:~
-```
+scp weighted_graph.txt azureuser@172.191.236.199:~
 
 ### 2. Prepare Project on VM
 SSH into the VM and set up the project:

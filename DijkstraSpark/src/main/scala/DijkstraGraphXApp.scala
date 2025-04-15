@@ -54,7 +54,6 @@ object DijkstraGraphXApp {
    * ...
    */
   def readGraphFromFile(sc: SparkContext, filename: String): (RDD[(VertexId, Double)], RDD[Edge[Double]]) = {
-    // Read all lines from the file
     val lines = sc.textFile(filename)
     
     // Extract the first line to get num_nodes and num_edges
